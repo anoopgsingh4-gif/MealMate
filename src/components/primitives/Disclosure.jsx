@@ -1,16 +1,28 @@
 import { useId, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Disclosure({ title, defaultOpen=false, children }) {
+/**
+ * Disclosure
+ * ----------
+ * A collapsible section with +/- toggle, smooth animation, and accessibility attributes.
+ *
+ * Props:
+ *  - title (string): heading text
+ *  - defaultOpen (boolean): whether section starts open
+ *  - children (ReactNode): content inside the collapsible
+ */
+export default function Disclosure({ title, defaultOpen = false, children }) {
   const [open, setOpen] = useState(defaultOpen);
   const id = useId();
+
   return (
     <div className="mb-4">
+      {/* Toggle button */}
       <button
         className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-white border hover:bg-gray-50 transition-colors"
         aria-expanded={open}
         aria-controls={`panel-${id}`}
-        onClick={() => setOpen(o => !o)}
+        onClick={() => setOpen((o) => !o)}
       >
         <span className="font-semibold text-lg">{title}</span>
         <span
@@ -20,6 +32,8 @@ export default function Disclosure({ title, defaultOpen=false, children }) {
           {open ? "−" : "+"}
         </span>
       </button>
+
+      {/* Collapsible content */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
