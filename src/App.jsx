@@ -24,7 +24,6 @@ import IngredientPicker from "/components/ingredients/IngredientPicker.jsx";
 import FiltersBar from "/components/filters/FiltersBar.jsx";
 import RecipeList from "/components/suggestions/RecipeList.jsx";
 import RecipeDetail from "/components/recipe/RecipeDetail.jsx";
-
 import { useAppState } from "/hooks/useAppState.js";
 import { useDerived } from "/hooks/useDerived.js";
 
