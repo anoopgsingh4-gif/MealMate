@@ -74,5 +74,7 @@ export default function RecipeDetail({ app, derived }) {
             <button className="px-3 py-2 rounded-lg border" onClick={()=>openBlinkit([...requiredMissing.map(i=>i.name), ...spiceMissing])}>Buy on Blinkit</button>
           </div>
         </div>
-      </div>
-   
+       </div> 
+  </section>  
+);
+
