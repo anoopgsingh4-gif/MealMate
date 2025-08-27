@@ -5,7 +5,7 @@ import Section from "../primitives/Section.jsx";
 
 export default function FiltersBar({ app }) {
   return (
-    <Section title="2. Preferences" icon={<FilterIcon className="w-5 h-5" />} collapsible defaultOpen>
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-start">
         {/* Missing ingredients slider */}
         <div className="min-w-[220px]">
@@ -100,6 +100,6 @@ export default function FiltersBar({ app }) {
           </div>
         )}
       </div>
-    </Section>
+   
   );
 }
