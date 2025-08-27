@@ -3,6 +3,10 @@ import { RefreshCcw, Search, Mic, MicOff, ListChecks } from "lucide-react";
 import { INGREDIENT_CATALOG } from "../../data/ingredients";
 import { useSpeechInput } from "../../hooks/useSpeechInput";
 import { Tokenizer } from "../../lib/tokenizer";
+import Section from "../primitives/Section.jsx";
+import Button from "../primitives/Button.jsx";
+import Pill from "../primitives/Pill.jsx";
+
 
 const Pill = ({active,onClick,children}) => (
   <button className={`px-3 py-1 rounded-full border text-sm mr-2 mb-2 ${active?"bg-emerald-600 text-white":""}`} onClick={onClick}>{children}</button>
