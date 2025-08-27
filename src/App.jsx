@@ -19,14 +19,14 @@
 import React from "react";
 import { ChefHat, Star } from "lucide-react";
 
-import Disclosure from "./components/primitives/Disclosure.jsx";
-import IngredientPicker from "./components/ingredients/IngredientPicker.jsx";
-import FiltersBar from "./components/filters/FiltersBar.jsx";
-import RecipeList from "./components/suggestions/RecipeList.jsx";
-import RecipeDetail from "./components/recipe/RecipeDetail.jsx";
+import Disclosure from "/components/primitives/Disclosure.jsx";
+import IngredientPicker from "/components/ingredients/IngredientPicker.jsx";
+import FiltersBar from "/components/filters/FiltersBar.jsx";
+import RecipeList from "/components/suggestions/RecipeList.jsx";
+import RecipeDetail from "/components/recipe/RecipeDetail.jsx";
 
-import { useAppState } from "./hooks/useAppState.js";
-import { useDerived } from "./hooks/useDerived.js";
+import { useAppState } from "/hooks/useAppState.js";
+import { useDerived } from "/hooks/useDerived.js";
 
 export default function App() {
   const app = useAppState();
