@@ -1,12 +1,32 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MealMate</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>MealMate — Your friendly vegetarian meal planner</title>
+    <meta
+      name="description"
+      content="MealMate helps you discover vegetarian recipes from the ingredients you already have. Smart filtering, pantry mode, and step-by-step cook mode."
+    />
+    <meta name="theme-color" content="#10b981" />
+    <meta name="color-scheme" content="light dark" />
   </head>
   <body class="bg-gray-50">
+    <noscript>
+      <div
+        style="margin:16px;padding:12px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#111827;"
+      >
+        MealMate needs JavaScript to run. Please enable JavaScript in your
+        browser.
+      </div>
+    </noscript>
+
     <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
+
+    <!-- IMPORTANT: absolute path for Vite entry (works in dev & build) -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
