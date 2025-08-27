@@ -109,31 +109,39 @@ export default function IngredientPicker({ app, derived }) {
           ))}
         </div>
 
-        <div className="space-y-3">
-          <label className="block text-sm font-medium">Quick add</label>
-          <div className="flex gap-2">
-            <input
-              value={freeText}
-              onChange={(e) => setFreeText(e.target.value)}
-              placeholder="e.g., tomato, rice, paneer"
-              className="flex-1 border rounded-lg px-3 py-2"
-            />
-            <Button onClick={addFreeText}>Add</Button>
-            <Button
-              variant="outline"
-              className={speech.listening ? "bg-red-50" : undefined}
-              onClick={speech.listening ? speech.stop : speech.start}
-              aria-pressed={speech.listening}
-              aria-label={speech.listening ? "Stop voice input" : "Start voice input"}
-              title={speech.listening ? "Stop voice input" : "Start voice input"}
-            >
-              {speech.listening ? (
-                <MicOff className="w-5 h-5" />
-              ) : (
-                <Mic className="w-5 h-5" />
-              )}
-            </Button>
-          </div>
+        <label className="block text-sm font-medium">Quick add</label>
+
+{/* Wrapping row that keeps everything inside on narrow widths */}
+<div className="flex flex-wrap items-center gap-2 overflow-x-hidden">
+  {/* Flexible input with mic inside */}
+  <div className="relative flex-1 min-w-[240px]">
+    <input
+      value={freeText}
+      onChange={(e) => setFreeText(e.target.value)}
+      placeholder="e.g., tomato, rice, paneer"
+      className="w-full border rounded-lg px-3 py-2 pr-11"  // pr-11 to make space for mic
+      aria-label="Quick add ingredients"
+    />
+
+    {/* Mic button anchored inside the input (never overflows) */}
+    <Button
+      variant="outline"
+      className={`absolute right-1 top-1/2 -translate-y-1/2 h-8 px-2 shrink-0 ${speech.listening ? "bg-red-50" : ""}`}
+      onClick={speech.listening ? speech.stop : speech.start}
+      aria-pressed={speech.listening}
+      aria-label={speech.listening ? "Stop voice input" : "Start voice input"}
+      title={speech.listening ? "Stop voice input" : "Start voice input"}
+    >
+      {speech.listening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+    </Button>
+  </div>
+
+  {/* Add button stays inside row and doesn’t shrink */}
+  <Button onClick={addFreeText} className="shrink-0 whitespace-nowrap">
+    Add
+  </Button>
+</div>
+
 
           <PantryManager app={app} />
         </div>
