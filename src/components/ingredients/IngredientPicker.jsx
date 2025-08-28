@@ -86,7 +86,6 @@ export default function IngredientPicker({ app, derived }) {
               </div>
               <div className="flex flex-wrap">
                 {items
-                  .filter((it) => derived.reachableUniverse.has(it) || app.selected.has(it))
                   .filter((it) => !search || it.toLowerCase().includes(search))
                   .map((it) => (
                     <Pill
