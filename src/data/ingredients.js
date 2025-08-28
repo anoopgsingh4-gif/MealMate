@@ -1,32 +1,102 @@
+// src/data/ingredients.js
+
+// Optional: lightweight alias map that you can use in Tokenizer.normalize()
+// so user input like "sooji" or "flattened rice" resolves to the canonical token.
+export const INGREDIENT_ALIASES = {
+  // breakfast bases
+  "flattened rice": "poha",
+  aval: "poha",
+  avalakki: "poha",
+  "beaten rice": "poha",
+  sooji: "rava",
+  suji: "rava",
+  semolina: "rava",
+  "idli rawa": "idli rava",
+  "rolled oats": "oats",
+
+  // dairy
+  yoghurt: "yogurt",
+  curd: "yogurt,
+
+  // oils/fats
+  "vegetable oil": "oil",
+  "refined oil": "oil",
+
+  // spices (common variants)
+  "red chilli powder": "red chili powder",
+  chilli: "chili",
+  chillies: "chili",
+};
+
 export const INGREDIENT_CATALOG = {
+  "Breakfast Staples": [
+    "poha",            // flattened rice
+    "rava",            // semolina / sooji
+    "idli rava",
+    "oats",
+    "bread",
+    "upma mix",
+    "cornflakes",
+    "muesli",
+    "milk",
+    "yogurt"           // curd
+  ],
+
   "Fresh Produce": [
-    "tomato","potato","onion","garlic","ginger","spinach","capsicum","carrot","green chilli","coriander leaves","lemon","cauliflower","peas"
+    "onion",
+    "tomato",
+    "potato",
+    "ginger",
+    "garlic",
+    "green chili",
+    "coriander",
+    "curry leaves",
+    "lemon",
+    "spinach"
   ],
-  Grains: ["rice","idli rice","wheat flour","poha","rava","bread"],
-  Pulses: ["chickpeas","toor dal","moong dal","rajma","chana dal","urad dal","besan"],
-  Dairy: ["milk","curd","paneer","ghee","butter"],
-  Oils: ["oil","mustard oil"],
-  Spices: [
-    "salt","turmeric","red chilli powder","coriander powder","garam masala","cumin seeds","mustard seeds","asafoetida","black pepper","curry leaves","kasuri methi","fenugreek seeds","bay leaf","cloves","cardamom","cinnamon"
+
+  "Grains & Flours": [
+    "rice",
+    "wheat flour",
+    "besan",
+    "maida",
+    "rice flour"
   ],
-  Other: ["water","sugar","poha sev","lemon juice","yogurt"]
-};
 
-export const ING_TO_CAT = new Map(
-  Object.entries(INGREDIENT_CATALOG).flatMap(([cat, arr]) =>
-    arr.map((n) => [n, cat])
-  )
-);
+  "Legumes & Lentils": [
+    "urad dal",
+    "chana dal",
+    "moong dal"
+  ],
 
-// Optional defensive freeze
-const deepFreeze = (obj) => {
-  Object.freeze(obj);
-  Object.getOwnPropertyNames(obj).forEach((p) => {
-    const v = obj[p];
-    if (v && (typeof v === "object" || typeof v === "function") && !Object.isFrozen(v)) {
-      deepFreeze(v);
-    }
-  });
-  return obj;
+  "Spices & Seeds": [
+    "mustard seeds",
+    "cumin",
+    "turmeric",
+    "red chili powder",
+    "hing",
+    "coriander powder",
+    "garam masala",
+    "black pepper",
+    "fenugreek"
+  ],
+
+  "Oils & Fats": [
+    "ghee",
+    "oil",
+    "butter"
+  ],
+
+  "Condiments & Extras": [
+    "green chutney",
+    "tamarind chutney",
+    "ketchup",
+    "honey",
+    "salt",
+    "sugar",
+    "baking powder",
+    "tea leaves",
+    "cardamom",
+    "cinnamon"
+  ]
 };
-deepFreeze(INGREDIENT_CATALOG);
