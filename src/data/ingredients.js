@@ -5,7 +5,7 @@ export const INGREDIENT_CATALOG = {
     "tomato","potato","onion","garlic","ginger","spinach","capsicum","carrot",
     "green chilli","coriander leaves","lemon","cauliflower","peas",
     // breakfast adds
-    "banana","mango"
+    "banana","mango"  "cucumber"
   ],
   Grains: [
     "rice","idli rice","wheat flour","poha","rava","bread",
