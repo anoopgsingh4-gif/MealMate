@@ -1,5 +1,120 @@
 export const RECIPES = [
   // Snacks / Breakfast
+  {
+    id: "kanda-poha",
+    title: "Kanda Poha",
+    time: 20,
+    tags: ["breakfast", "quick", "light"],
+    ingredients: [
+      "poha", "onion", "green chilli", "mustard seeds", "turmeric",
+      "peanuts", "coriander leaves", "lemon", "oil", "salt"
+    ],
+    steps: [
+      "Rinse poha and drain.",
+      "Heat oil; splutter mustard seeds. Sauté onion and green chilli.",
+      "Add turmeric and drained poha; mix gently with salt.",
+      "Finish with peanuts, coriander leaves, lemon."
+    ]
+  },
+  {
+    id: "rava-upma",
+    title: "Rava Upma",
+    time: 25,
+    tags: ["breakfast", "south indian"],
+    ingredients: [
+      "rava", "onion", "ginger", "green chilli", "curry leaves",
+      "ghee", "salt", "water"
+    ],
+    steps: [
+      "Dry roast rava until aromatic; keep aside.",
+      "In ghee, sauté onion, ginger, green chilli, curry leaves.",
+      "Add water and salt; bring to boil.",
+      "Rain in rava while stirring; steam 3–5 minutes."
+    ]
+  },
+  {
+    id: "idli",
+    title: "Steamed Idli",
+    time: 30,
+    tags: ["breakfast", "south indian", "fermented"],
+    ingredients: ["idli rice", "idli rava", "urad dal", "fenugreek seeds", "salt", "water", "oil"],
+    steps: [
+      "Soak idli rice + idli rava + urad dal with fenugreek seeds; grind and ferment overnight.",
+      "Grease moulds with a little oil; pour batter.",
+      "Steam 10–12 minutes. Rest 2 minutes and demould."
+    ]
+  },
+  {
+    id: "dosa",
+    title: "Crispy Dosa",
+    time: 30,
+    tags: ["breakfast", "south indian", "fermented"],
+    ingredients: ["rice", "urad dal", "fenugreek seeds", "salt", "oil", "water"],
+    steps: [
+      "Soak rice + urad dal with fenugreek seeds; grind and ferment overnight.",
+      "Spread batter thin on hot tawa; drizzle oil.",
+      "Cook until golden and crisp; serve hot."
+    ]
+  },
+  {
+    id: "aloo-paratha",
+    title: "Aloo Paratha",
+    time: 35,
+    tags: ["breakfast", "north indian", "hearty"],
+    ingredients: [
+      "wheat flour", "potato", "green chilli", "coriander leaves", "ghee", "salt", "water"
+    ],
+    steps: [
+      "Make soft dough with wheat flour, water, salt; rest.",
+      "Mash boiled potato with green chilli, salt, coriander leaves.",
+      "Stuff, roll, and roast on tawa with ghee until golden."
+    ]
+  },
+  {
+    id: "oats-pancakes",
+    title: "Banana Oats Pancakes",
+    time: 20,
+    tags: ["breakfast", "healthy", "sweet"],
+    ingredients: ["oats", "banana", "milk", "baking powder", "honey", "butter"],
+    steps: [
+      "Blend oats to flour.",
+      "Mix with mashed banana, milk, baking powder.",
+      "Cook small pancakes; serve with honey."
+    ]
+  },
+  {
+    id: "veg-grilled-sandwich",
+    title: "Vegetable Grilled Sandwich",
+    time: 15,
+    tags: ["breakfast", "snack", "quick"],
+    ingredients: ["bread", "butter", "tomato", "cucumber", "capsicum", "cheese", "salt", "black pepper"],
+    steps: [
+      "Butter bread; layer tomato, cucumber, capsicum, cheese; season.",
+      "Grill/toast until crisp and melty."
+    ]
+  },
+  {
+    id: "masala-chai",
+    title: "Masala Chai",
+    time: 10,
+    tags: ["breakfast", "beverage"],
+    ingredients: ["tea leaves", "milk", "ginger", "cardamom", "cinnamon", "sugar", "water"],
+    steps: [
+      "Boil water with crushed ginger, cardamom, cinnamon.",
+      "Add tea leaves; simmer.",
+      "Add milk and sugar; boil briefly. Strain."
+    ]
+  },
+  {
+    id: "mango-lassi",
+    title: "Mango Lassi",
+    time: 5,
+    tags: ["breakfast", "beverage", "cool"],
+    ingredients: ["mango", "yogurt", "milk", "honey"],
+    steps: [
+      "Blend mango, yogurt, milk, honey until smooth; chill."
+    ]
+  },
   { id: "poha", name: "Kanda Poha (Onion Poha)", mealType: "snack", timeMin: 20, jainFriendly: false,
     ingredients: [
       { name: "poha", cat: "Grains" },
