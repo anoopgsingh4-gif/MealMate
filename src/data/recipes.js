@@ -1,21 +1,6 @@
 export const RECIPES = [
   // Snacks / Breakfast
-  {
-    id: "kanda-poha",
-    title: "Kanda Poha",
-    time: 20,
-    tags: ["breakfast", "quick", "light"],
-    ingredients: [
-      "poha", "onion", "green chilli", "mustard seeds", "turmeric",
-      "peanuts", "coriander leaves", "lemon", "oil", "salt"
-    ],
-    steps: [
-      "Rinse poha and drain.",
-      "Heat oil; splutter mustard seeds. Sauté onion and green chilli.",
-      "Add turmeric and drained poha; mix gently with salt.",
-      "Finish with peanuts, coriander leaves, lemon."
-    ]
-  },
+ 
   {
     id: "rava-upma",
     title: "Rava Upma",
